@@ -442,6 +442,30 @@ namespace CodingConnected.TraCI.NET.Commands
 					TraCIConstants.VAR_PARAMETER);
 		}
 
+        /// <summary>
+        /// Converts a position from the simulation coordinate system to longitude and latitude.
+        /// <see href="https://sumo.dlr.de/docs/TraCI/Simulation_Value_Retrieval.html#command_0x82_position_conversion"/>
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <returns></returns>
+        public TraCIResponse<LonLatPosition> ConvertGeo(Position2D pos)
+        {
+            CompoundObject co = new CompoundObject();
+            co.Value.Add(pos);
+            co.Value.Add(new TraCIUByte() { Value = TraCIConstants.POSITION_LON_LAT });
+
+            TraCICommand command = TraCICommandHelper.GetCommand(
+                "",
+                TraCIConstants.CMD_GET_SIM_VARIABLE,
+                TraCIConstants.POSITION_CONVERSION,
+                co);
+            var response = Client.SendMessage(command);
+            return TraCIDataConverter.ExtractDataFromResponse<LonLatPosition>(
+                response,
+                TraCIConstants.CMD_GET_SIM_VARIABLE,
+                TraCIConstants.POSITION_CONVERSION);
+        }
+
         // TODO: 'extended retrieval', see: http://sumo.dlr.de/wiki/TraCI/Simulation_Value_Retrieval
 
         /// <summary>
