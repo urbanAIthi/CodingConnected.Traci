@@ -6,12 +6,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using CodingConnected.TraCI.NET;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.CommandWpf;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace TraCIClassCreator
 {
-	public class MainWindowViewModel : ViewModelBase
+	public class MainWindowViewModel : ObservableObject
 	{
 		#region Fields
 
@@ -34,7 +34,7 @@ namespace TraCIClassCreator
 			set
 			{
 				_className = value; 
-				RaisePropertyChanged();
+				OnPropertyChanged();
 			}
 		}
 
@@ -44,7 +44,7 @@ namespace TraCIClassCreator
 			set
 			{
 				_commandText = value; 
-				RaisePropertyChanged();
+				OnPropertyChanged();
 			}
 		}
 
@@ -54,7 +54,7 @@ namespace TraCIClassCreator
 			set
 			{
 				_inputText = value; 
-				RaisePropertyChanged();
+				OnPropertyChanged();
 			}
 		}
 
@@ -64,7 +64,7 @@ namespace TraCIClassCreator
 			set
 			{
 				_outputText = value; 
-				RaisePropertyChanged();
+				OnPropertyChanged();
 			}
 		}
 
@@ -74,7 +74,7 @@ namespace TraCIClassCreator
             set
             {
                 _traciConstantsCpp = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -84,7 +84,7 @@ namespace TraCIClassCreator
             set
             {
                 _traciConstantsCsharp = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -135,7 +135,7 @@ namespace TraCIClassCreator
             }
 
             TraciConstantsCsharp = sb.ToString();
-            RaisePropertyChanged(nameof(TraciConstantsCsharp));
+            OnPropertyChanged(nameof(TraciConstantsCsharp));
         }
 
 		private void ProcessTextCommand_executed()
