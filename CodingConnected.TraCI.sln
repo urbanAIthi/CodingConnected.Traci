@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CodingConnected.TraCI.C", "CodingConnected.Traci.C\CodingConnected.Traci.C.vcxproj", "{10C3C7D7-9D1E-4C78-B395-5FA46C0ADC0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingConnected.TraCI.NET", "CodingConnected.Traci.NET\CodingConnected.TraCI.NET.csproj", "{2E2F7244-3E8C-41F0-8AD2-567ACF862B75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingConnected.TraCI.NET", "CodingConnected.Traci.NET\CodingConnected.TraCI.NET.csproj", "{2E2F7244-3E8C-41F0-8AD2-567ACF862B75}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE057C7F-6779-4565-8F97-9628AC5FE1C0}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraCIClassCreator", "TraCIClassCreator\TraCIClassCreator.csproj", "{CAB3CE48-985E-4D3A-B2C5-3AFD82C1A3FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraCIClassCreator", "TraCIClassCreator\TraCIClassCreator.csproj", "{CAB3CE48-985E-4D3A-B2C5-3AFD82C1A3FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TracCI.NET-Usage-example", "TracCI.NET-Usage-example\TracCI.NET-Usage-example.csproj", "{C510A87A-1B59-4B12-B915-66BC7F19D02F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TracCI.NET-Usage-example", "TracCI.NET-Usage-example\TracCI.NET-Usage-example.csproj", "{C510A87A-1B59-4B12-B915-66BC7F19D02F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
