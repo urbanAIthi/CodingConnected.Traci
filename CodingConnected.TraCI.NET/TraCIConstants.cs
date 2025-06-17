@@ -900,6 +900,9 @@
         // sets/retrieves abstract parameter
         public const byte VAR_PARAMETER = 0x7e;
 
+        // sets/retrieves traffic scaling factor
+        public const byte VAR_SCALE = 0x8e;
+
 
         // add an instance (poi, polygon, vehicle, person, route)
         public const byte ADD = 0x80;

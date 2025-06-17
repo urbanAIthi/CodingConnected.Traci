@@ -442,6 +442,37 @@ namespace CodingConnected.TraCI.NET.Commands
 					TraCIConstants.VAR_PARAMETER);
 		}
 
+		/// <summary>
+		/// Returns the traffic scaling factor.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
+		public TraCIResponse<double> GetScale(string id)
+		{
+			return
+				TraCICommandHelper.ExecuteGetCommand<double>(
+					Client,
+					id,
+					TraCIConstants.CMD_GET_SIM_VARIABLE,
+					TraCIConstants.VAR_SCALE);
+		}
+
+		/// <summary>
+		///  Sets the traffic scaling factor.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <param name="scale"></param>
+		/// <returns></returns>
+		public TraCIResponse<object> SetScale(string id, double scale)
+		{
+			return TraCICommandHelper.ExecuteSetCommand<object, double>(
+				Client,
+				id,
+				TraCIConstants.CMD_SET_SIM_VARIABLE,
+				TraCIConstants.VAR_SCALE,
+				scale);
+		}
+
         /// <summary>
         /// Converts a position from the simulation coordinate system to longitude and latitude.
         /// <see href="https://sumo.dlr.de/docs/TraCI/Simulation_Value_Retrieval.html#command_0x82_position_conversion"/>
